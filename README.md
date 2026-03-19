@@ -1,5 +1,5 @@
-# example_for_course_work
-Simple example of how Python backend can works with frontend
+# ML модель - предсказатель студенческого результата учебы
+## Запуск и развертка
 
 Развертывание Python проекта локально:
 1) создаём и подключаем виртуальное окружение
@@ -9,7 +9,7 @@ Simple example of how Python backend can works with frontend
 	- For Windows:
 		- **your_virtual_environment_name**\Scripts\activate.bat
 2) устанавливаем зависимости: pip install -r requirements.txt 
-3) запускаем проект uvicorn simple-api:app --reload
+3) запускаем проект uvicorn simple-api:app --reload --host <localhost/your ip>
 
 Документация и примеры работы доступны по адресу http://127.0.0.1:8000/docs
 
