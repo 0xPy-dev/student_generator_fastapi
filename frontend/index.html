@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Прогноз успеваемости студента</title>
+  <link rel="stylesheet" type="text/css" href="/static/css/fonts.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="icon" href="/static/img/favicon.ico" type="text/ico">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="/static/js/script.js" defer></script>
+</head>
+
+<body>
+<header>
+  <nav>
+    <ul>
+      <li><a href="#input" class="menu-element">Вводные данные</a></li>
+      <li><a href="#output" class="menu-element">Результат</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="contact" id="input">
+  <h2 class="main-title">Вводные данные</h2>
+  <div class="delimiter"></div>
+
+  <form id="form" class="contact-form">
+    <div class="form-panel">
+
+      <!-- 1 -->
+      <div class="form-row">
+        <select name="Gender" class="col" required>
+          <option value="" disabled selected>Пол</option>
+          <option value="0">Женский</option>
+          <option value="1">Мужской</option>
+        </select>
+
+        <input name="Age_at_enrollment" type="number" min="0" max="100" class="col" placeholder="Возраст" required>
+      </div>
+
+      <!-- 2 -->
+      <div class="form-row">
+        <select name="Marital_status" class="col" required>
+          <option value="" disabled selected>Семейное положение</option>
+          <option value="1">Холост/Не замужем</option>
+          <option value="2">Женат/Замужем</option>
+          <option value="3">Разведён</option>
+        </select>
+
+        <select name="Application_mode" class="col" required>
+          <option value="" disabled selected>Способ подачи</option>
+          <option value="1">Онлайн</option>
+          <option value="17">Очно</option>
+        </select>
+      </div>
+
+      <!-- 3 -->
+      <div class="form-row">
+        <select name="Application_order" class="col" required>
+          <option value="" disabled selected>Очередность</option>
+          <option value="1">Первый выбор</option>
+          <option value="2">Второй</option>
+          <option value="3">Третий</option>
+        </select>
+
+        <select name="Course" class="col" required>
+          <option value="" disabled selected>Курс</option>
+          <option value="171">Информатика</option>
+          <option value="33">Менеджмент</option>
+          <option value="9254">Инженерия</option>
+        </select>
+      </div>
+
+      <!-- 4 -->
+      <div class="form-row">
+        <select name="Daytime_evening_attendance" class="col" required>
+          <option value="" disabled selected>Форма обучения</option>
+          <option value="1">Дневная</option>
+          <option value="0">Вечерняя</option>
+        </select>
+
+        <select name="Previous_qualification" class="col" required>
+          <option value="" disabled selected>Предыдущее образование</option>
+          <option value="1">Школа</option>
+          <option value="2">Колледж</option>
+          <option value="3">Другое</option>
+        </select>
+      </div>
+
+      <!-- 5 -->
+      <div class="form-row">
+        <input name="Admission_grade" type="number" min="0" max="100" step="0.1" class="col" placeholder="Вступительный балл" required>
+
+        <select name="Scholarship_holder" class="col" required>
+          <option value="" disabled selected>Стипендия</option>
+          <option value="0">Нет</option>
+          <option value="1">Да</option>
+        </select>
+      </div>
+
+      <input type="submit" class="submit btn" value="Предсказать">
+    </div>
+  </form>
+</section>
+
+  <section class="contact" id="output">
+    <h2 class="main-title">Результат</h2>
+    <div class="delimiter"></div>
+    <div id="result" class="testimonials-container"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="social">
+    <a href="#"><img src="/static/img/social/001-facebook.png" alt="Facebook"></a>
+    <a href="#"><img src="/static/img/social/004-linkedin.png" alt="LinkedIn"></a>
+  </div>
+  <div class="copyright">© 2026 Created with FastAPI.</div>
+</footer>
+</body>
+</html>
